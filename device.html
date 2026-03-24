@@ -2,10 +2,27 @@
 <html>
 <head>
     <title>Device Details</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1 id="title"></h1>
-    <pre id="output"></pre>
+
+    <div class="page">
+
+        <section>
+            <h1 class="section-title" id="title">Loading...</h1>
+            <p class="muted">Device information pulled from database</p>
+        </section>
+
+        <div class="info-card devices">
+            <div class="card-content">
+                <p id="output">
+                </p>
+            </div>
+        </div>
+
+    </div>
 
     <script>
         const params = new URLSearchParams(window.location.search);
@@ -20,10 +37,15 @@
             const device = data[id];
 
             document.getElementById("title").textContent = "Filter ID: " + id;
-            document.getElementById("output").textContent = JSON.stringify(device, null, 2);
+
+            document.getElementById("output").textContent =
+                JSON.stringify(device, null, 2);
+            
+                device
         }
 
         loadDevice();
     </script>
+
 </body>
 </html>
