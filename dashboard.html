@@ -1,0 +1,36 @@
+﻿<!--
+RULES:
+1.NO BOOTSTRAP
+2.ABSOLUTELY NO BOOTSTRAP
+3.MAKE SURE THERE IS NO HINT OF BOOTSTRAP
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Network Dashboard</title>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-brand">AquaClear</div>
+        <div class="nav-links">
+            <a href="index.html">About</a>
+            <a class="active" href="dashboard.html">Dashboard</a>
+        </div>
+    </nav>
+
+    <h1 class="dashboard-title">Dashboard</h1>
+    <input
+        type="text"
+        id="search"
+        placeholder="Search devices by ID..."
+    />
+
+    <div class="devices" id="devices-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
