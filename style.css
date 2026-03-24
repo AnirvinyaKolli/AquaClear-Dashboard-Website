@@ -255,6 +255,7 @@ body {
     color: rgba(234, 246, 255, 0.8);
 }
 
+
 .filter-item {
     background: white;
     padding: 1%;
@@ -262,8 +263,11 @@ body {
     border-radius: 10px;
     border: 1px solid #dce7f7;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-
+    display: block;
+    cursor: pointer;
     position: relative;
+    text-decoration: none;
+
 
 }
 

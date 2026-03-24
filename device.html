@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Device Details</title>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <pre id="output"></pre>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+
+        const DB_URL = "https://drainfiltertesting-default-rtdb.firebaseio.com/test.json";
+
+        async function loadDevice() {
+            const res = await fetch(DB_URL);
+            const data = await res.json();
+
+            const device = data[id];
+
+            document.getElementById("title").textContent = "Filter ID: " + id;
+            document.getElementById("output").textContent = JSON.stringify(device, null, 2);
+        }
+
+        loadDevice();
+    </script>
+</body>
+</html>

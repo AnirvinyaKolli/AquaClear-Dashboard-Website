@@ -64,7 +64,9 @@ function renderDevices(data){
 
     for (const deviceId of renderedDevices) {
         const status = data[deviceId].filterStatus.toLowerCase();
-        const card = document.createElement("div");
+        const card = document.createElement("a");
+
+        card.href = `device.html?id=${deviceId}`;
         card.className = "filter-item";
         card.innerHTML = `
             <div class="card-content">
